@@ -7,7 +7,6 @@
 </head>
 <body>
     <header>
-        <h1>Hoi Allemaal</h1>
 
     </header>
     <body>

@@ -3,25 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tasks</title>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="wrapper">
-                <nav>
-                    <a href="create.php">create</a>
-                </nav>
-            </div>
-        </header>
-        <body>
-            
-        </body>
-        <footer>
+    <h1>Tasks overzicht</h1>
 
-        </footer>
-
-
-    </div>
+    <a href="create.php">Nieuwe taak aanmaken</a>
 </body>
 </html>

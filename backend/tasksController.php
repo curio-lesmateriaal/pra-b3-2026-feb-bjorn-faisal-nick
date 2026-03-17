@@ -9,10 +9,21 @@ class TaskController {
     }
 
     private function storeTask() {
-        $naam = $_POST['Naam'] ?? 'Anoniem';
-        $bericht = $_POST['Bericht'] ?? '';
 
-        file_put_contents('tasksfile.txt', $naam . "," . $bericht . PHP_EOL, FILE_APPEND);
+        $naam = trim($_POST['Naam'] ?? '');
+        $bericht = trim($_POST['Bericht'] ?? '');
+
+        if (empty($naam) || empty($bericht)) {
+            echo "Vul alle velden in.";
+            exit;
+        }
+
+        $naam = htmlspecialchars($naam);
+        $bericht = htmlspecialchars($bericht);
+
+        $file = __DIR__ . '/../tasks/tasksfile.txt';
+
+        file_put_contents($file, $naam . "," . $bericht . PHP_EOL, FILE_APPEND);
 
         header("Location: ../tasks/create.php?status=success");
         exit;
@@ -20,7 +31,5 @@ class TaskController {
 }
 
 $controller = new TaskController();
-$action = $_GET['action'] ?? 'store';
+$action = $_POST['action'] ?? null;
 $controller->handleRequest($action);
-
-veranderen

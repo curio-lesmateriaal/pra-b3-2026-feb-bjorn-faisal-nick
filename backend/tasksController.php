@@ -1,11 +1,35 @@
 <?php
-$naam = $_POST['Naam'];
-$bericht = $_POST['Bericht'];
 
-file_put_contents('tasksfile.txt', $naam . "," . $bericht, FILE_APPEND);
+class TaskController {
 
-echo $naam . "," . $bericht;
+    public function handleRequest($action) {
+        if ($action === 'store') {
+            $this->storeTask();
+        }
+    }
 
-$msg = "Bedankt, " . $naam . ". We hebben je bericht ontvangen!"
-header("location: ../tasks/create.php")
-?>
+    private function storeTask() {
+
+        $naam = trim($_POST['Naam'] ?? '');
+        $bericht = trim($_POST['Bericht'] ?? '');
+
+        if (empty($naam) || empty($bericht)) {
+            echo "Vul alle velden in.";
+            exit;
+        }
+
+        $naam = htmlspecialchars($naam);
+        $bericht = htmlspecialchars($bericht);
+
+        $file = __DIR__ . '/../tasks/tasksfile.txt';
+
+        file_put_contents($file, $naam . "," . $bericht . PHP_EOL, FILE_APPEND);
+
+        header("Location: ../tasks/create.php?status=success");
+        exit;
+    }
+}
+
+$controller = new TaskController();
+$action = $_POST['action'] ?? null;
+$controller->handleRequest($action);

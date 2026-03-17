@@ -5,7 +5,6 @@
     <title></title>
     <?php require_once 'head.php'; ?>
 </head>
-
 <body>
     <div class="container">
         <header>
@@ -22,8 +21,8 @@
 
         </footer>
 
-
-    </div>
+<div class="container">
+</div>
 
 </body>
 

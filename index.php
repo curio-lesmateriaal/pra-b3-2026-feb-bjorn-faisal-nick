@@ -12,7 +12,7 @@
             <div class="wrapper">
                 <nav>
                     <a href="">Personeel</a>
-                    <a href="">Horica</a>
+                    <a href="">Horeca</a>
                     <a href="">Techniek</a>
                     <a href="">Inkoop</a>
                     <a href="">Groen</a>

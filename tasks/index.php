@@ -10,7 +10,7 @@
         <header>
             <div class="wrapper">
                 <nav>
-                    <a href="tasks/create.php">create</a>
+                    <a href="create.php">create</a>
                 </nav>
             </div>
         </header>

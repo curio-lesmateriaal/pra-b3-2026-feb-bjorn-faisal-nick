@@ -4,14 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tasks</title>
-    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
+
+<div class="container">
+
+    <img src="img/logo-big-v4.png" alt="Logo" style="width:120px; margin-bottom:20px;">
+
     <h1>Tasks overzicht</h1>
 
-    <a href="create.php">Nieuwe taak aanmaken</a><br><br>
-    <a href="edit.php">Taak aanpassen</a><br><br>
-    <a href="done.php">Bekijk afgeronde taken</a><br><br>
-    <a href="../backend/taskController.php?action=delete">Alle taken verwijderen</a>
+    <a href="create.php">Nieuwe taak maken</a>
+    <a href="edit.php">Taak aanpassen</a>
+    <a href="done.php">Bekijk afgeronde taken</a>
+    
+    <a href="../controllers/tasksController.php?action=delete" class="delete">
+        Alle taken verwijderen
+    </a>
+
+</div>
+
 </body>
 </html>

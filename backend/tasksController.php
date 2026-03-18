@@ -10,22 +10,33 @@ class TaskController {
 
     private function storeTask() {
 
-        $naam = trim($_POST['Naam'] ?? '');
-        $bericht = trim($_POST['Bericht'] ?? '');
+        $titel = trim($_POST['titel'] ?? '');
+        $beschrijving = trim($_POST['beschrijving'] ?? '');
+        $afdeling = trim($_POST['afdeling'] ?? '');
+        $status = trim($_POST['status'] ?? 'todo');
 
-        if (empty($naam) || empty($bericht)) {
+        if (empty($titel) || empty($beschrijving) || empty($afdeling) || empty($status)) {
             echo "Vul alle velden in.";
             exit;
         }
 
-        $naam = htmlspecialchars($naam);
-        $bericht = htmlspecialchars($bericht);
+        $titel = htmlspecialchars($titel);
+        $beschrijving = htmlspecialchars($beschrijving);
+        $afdeling = htmlspecialchars($afdeling);
+        $status = htmlspecialchars($status);
 
         $file = __DIR__ . '/../tasks/tasksfile.txt';
 
-        file_put_contents($file, $naam . "," . $bericht . PHP_EOL, FILE_APPEND);
+        $fp = fopen($file, 'a');
+        if ($fp === false) {
+            echo "Kon het takenbestand niet openen.";
+            exit;
+        }
 
-        header("Location: ../tasks/create.php?status=success");
+        fputcsv($fp, [$titel, $beschrijving, $afdeling, $status]);
+        fclose($fp);
+
+        header("Location: ../tasks/index.php?status=success");
         exit;
     }
 }

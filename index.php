@@ -5,7 +5,6 @@
 <head>
     <title></title>
     <?php require_once 'head.php'; ?>
-    <link rel="stylesheet" href="css/main.css" type="text/css">
 </head>
 
 <body>

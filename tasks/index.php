@@ -69,13 +69,5 @@
             </tbody>
         </table>
     <?php endif; ?>
-    <a href="edit.php">Taak aanpassen</a>
-    <a href="done.php">Bekijk afgeronde taken</a>
-    
-    <a href="../controllers/tasksController.php?action=delete" class="delete">
-        Alle taken verwijderen
-    </a>
-
-</div>
 </body>
 </html>

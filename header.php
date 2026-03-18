@@ -10,7 +10,7 @@
                     <a href="">klanten service</a>
                     <a href="">Inkoop</a>
                     <a href="">Groen</a>
-                    <a href="tasks/edit.php">create</a> 
+                    <a href="tasks/tickets.php">tickets</a> 
                 </nav>
             </div>
         </div>

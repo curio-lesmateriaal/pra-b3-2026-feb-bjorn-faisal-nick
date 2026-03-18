@@ -73,17 +73,5 @@
             </tbody>
         </table>
     <?php endif; ?>
-=======
-    <a href="create.php">Nieuwe taak maken</a>
-    <a href="edit.php">Taak aanpassen</a>
-    <a href="done.php">Bekijk afgeronde taken</a>
-    
-    <a href="../controllers/tasksController.php?action=delete" class="delete">
-        Alle taken verwijderen
-    </a>
-
-</div>
-
->>>>>>> 7af2ef28076a9aa0d20944d4a7f66a4a96c8df06
 </body>
 </html>

@@ -8,6 +8,8 @@
 <body>
     <h1>Tasks overzicht</h1>
 
-    <a href="create.php">Nieuwe taak aanmaken</a>
+    <a href="create.php">Nieuwe taak aanmaken</a><br><br>
+    <a href="edit.php">Taak aanpassen</a><br><br>
+    <a href="../backend/taskController.php?action=delete">Alle taken verwijderen</a>
 </body>
 </html>

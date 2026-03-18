@@ -1,11 +1,13 @@
 <!doctype html>
 <html lang="nl">
 
+
 <head>
     <title></title>
     <?php require_once 'head.php'; ?>
     <link rel="stylesheet" href="css/main.css" type="text/css">
 </head>
+
 <body>
     <div class="container">
         <?php require_once 'header.php'; ?>
@@ -21,7 +23,7 @@
     </div>
 <div class="container">
 </div>
+    
 
 </body>
 
-</html>

@@ -10,6 +10,7 @@
 
     <a href="create.php">Nieuwe taak aanmaken</a><br><br>
     <a href="edit.php">Taak aanpassen</a><br><br>
+    <a href="done.php">Bekijk afgeronde taken</a><br><br>
     <a href="../backend/taskController.php?action=delete">Alle taken verwijderen</a>
 </body>
 </html>

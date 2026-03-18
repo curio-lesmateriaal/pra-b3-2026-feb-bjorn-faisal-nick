@@ -295,6 +295,9 @@ header{
   background:transparent;
 }
 
+a{
+  text-decoration: none;
+}
 
 .Topnav{
   display:flex;
@@ -360,4 +363,27 @@ footer {
   padding: 15px 0;       
 }
 
+.ticketnav{
+  margin: 15% 0;
+  display:flex;
+  justify-content: space-around;
+}
 
+.ticketnav a{
+    margin: 20px 40px;
+    padding: 12px;
+    background-color: #2bb673;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+
+}
+
+.Ticketcontainer{
+    width: 600px;
+    margin: 60px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}

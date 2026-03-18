@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-    <div class="container">
+    
         <header>
             <div class="wrapper">
                 <div class="Topnav">
@@ -25,15 +25,18 @@
                 </div>
             </div>
         </header>
+        </div>
+    <div class="Ticketcontainer">
+        <main>
+            <div class="ticketnav">
+                <nav>
+                    <a href="index.php">ticket maken</a>
+                    <a href="edit.php">ticket aanpassen</a>
+                    <a href="done.php">ticket history</a>
+                </nav>
+            </div>
+        </main>
     </div>
-    <main>
-        <nav>
-            <a href="index.php">ticket maken</a>
-            <a href="edit.php">ticket aanpassen</a>
-            <a href="done.php">ticket history</a>
-        </nav>
-    </main>
-
     <?php require_once '../footer.php'; ?>
 </body>
 </html>

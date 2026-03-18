@@ -291,12 +291,10 @@ label{
 /* ####################################################### */
 /* note: alles hierboven is mee gegeven, alles hieronder is later toe gevoegt! */
 header{
-  display:flex;
-  justify-content: space-evenly;
-  background-color: whitesmoke;
-  width:100%;
-  padding: 20px;
+  padding:0.5rem 0;
+  background:transparent;
 }
+
 
 .Topnav{
   display:flex;
@@ -305,13 +303,40 @@ header{
   text-decoration: none;
 }
 
-a{
+.Topnav nav{
+  display:flex;
+  gap:0.5rem;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+
+.Topnav a{
   text-decoration:none;
-  color:blue;
-  padding: 30px;
+  color:var(--muted);
+  padding:0.45rem 0.75rem;
+  border-radius:6px;
+  transition:all 180ms ease;
+  font-weight:600;
+  letter-spacing:0.2px;
+  background:transparent;
+  border:1px solid transparent;
+}
+
+.Topnav a:hover{
+  color:var(--bg);
+  background:linear-gradient(90deg,var(--accent-green),var(--accent-blue));
+  box-shadow:var(--shadow);
+  transform:translateY(-2px);
+  outline:none;
 }
 
 main h1{
+  display:flex;
+  justify-content: center;
+}
+
+.editDiv{
   display:flex;
   justify-content: center;
 }

@@ -8,21 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <div class="wrapper">
-                <div class="Topnav">
-                    <nav>
-                        <a href="">Personeel</a>
-                        <a href="">Horeca</a>
-                        <a href="">Techniek</a>
-                        <a href="">klanten service</a>
-                        <a href="">Inkoop</a>
-                        <a href="">Groen</a>
-                        <a href="tasks/create.php">create</a>
-                    </nav>
-                </div>
-            </div>
-        </header>
+        <?php require_once 'header.php'; ?>
         <main>
             <div class="wrapper">
                 <h1>TakenLijstTemp</h1>
@@ -31,14 +17,7 @@
                 </div>
             </div>
         </main>
-        <footer>
-            <div class="wrapper">
-                <nav>
-                    <a href="">contacts</a>
-                    <a href="">about us</a>
-                </nav>
-            </div>
-        </footer>
+        <?php require_once 'footer.php'; ?>
     </div>
 <div class="container">
 </div>

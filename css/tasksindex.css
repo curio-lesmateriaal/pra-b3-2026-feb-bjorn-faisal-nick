@@ -4,7 +4,6 @@ body {
     margin: 0;
 }
 
-/* Container */
 .container {
     width: 600px;
     margin: 60px auto;
@@ -14,12 +13,10 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Titel */
 h1 {
     color: #1f7a63;
 }
 
-/* Links als knoppen */
 a {
     display: block;
     margin: 10px 0;
@@ -35,7 +32,6 @@ a:hover {
     background-color: #239a60;
 }
 
-/* Delete knop */
 a.delete {
     background-color: #e74c3c;
 }

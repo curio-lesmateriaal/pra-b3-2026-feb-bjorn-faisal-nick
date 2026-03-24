@@ -12,7 +12,14 @@
 <body>
     <header>
         <div class="wrapper">
-            
+            <nav>
+                <a href="index.php">home</a>
+                <a href="hobbies.php">hobbies</a>
+                <a href="aboutme.php">about me</a>
+                <a href="contact.php">contact</a>
+                <a href="playlist.php">playlist</a>
+                <a href="projects.php">projects</a>
+            </nav>
         </div>
     </header>
     <div class="container">

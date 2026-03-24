@@ -54,8 +54,8 @@
             <thead>
                 <tr>
                     <th>Titel</th>
+                    <th>Beschrijving</th>
                     <th>Afdeling</th>
-                    <th>Status</th>
                 </tr>
             </thead>
             <tbody>

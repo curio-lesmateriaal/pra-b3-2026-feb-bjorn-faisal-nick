@@ -9,7 +9,7 @@ class TaskController {
     }
 
     private function storeTask() {
-
+        // Gegevens uit het formulier ophalen 
         $titel = trim($_POST['titel'] ?? '');
         $beschrijving = trim($_POST['beschrijving'] ?? '');
         $afdeling = trim($_POST['afdeling'] ?? '');
@@ -19,20 +19,20 @@ class TaskController {
             echo "Vul alle velden in.";
             exit;
         }
-
+        // Invoer beveiligen zet alles om naar veilige tekst
         $titel = htmlspecialchars($titel);
         $beschrijving = htmlspecialchars($beschrijving);
         $afdeling = htmlspecialchars($afdeling);
         $status = htmlspecialchars($status);
 
         $file = __DIR__ . '/../tasks/tasksfile.txt';
-
+        // Bestand openen
         $fp = fopen($file, 'a');
         if ($fp === false) {
             echo "Kon het takenbestand niet openen.";
             exit;
         }
-
+        // taken opslaan als CSV-regel om later makkelijk te kunnen lezen
         fputcsv($fp, [$titel, $beschrijving, $afdeling, $status]);
         fclose($fp);
 

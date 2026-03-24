@@ -13,7 +13,7 @@
                     <nav>
                         <a href="../index.php">Home</a>
                         <a href="">Personeel</a>
-                        <a href="">Horica</a>
+                        <a href="">Horeca</a>
                         <a href="">Techniek</a>
                         <a href="">klanten service</a>
                         <a href="">Inkoop</a>

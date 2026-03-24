@@ -10,6 +10,11 @@
 </head>
 
 <body>
+    <header>
+        <div class="wrapper">
+            
+        </div>
+    </header>
     <div class="container">
         <?php require_once 'header.php'; ?>
         <main>

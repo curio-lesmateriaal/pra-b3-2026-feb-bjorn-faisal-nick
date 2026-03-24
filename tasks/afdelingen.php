@@ -25,12 +25,12 @@
         <main>
             <div class="ticketnav">
                 <nav>
-                    <a href="">Personeel</a>
-                    <a href="">Horica</a>
-                    <a href="">Techniek</a>
-                    <a href="">klanten service</a>
-                    <a href="">Inkoop</a>
-                    <a href="">Groen</a>
+                    <a href="../personeel.php">Personeel</a>
+                    <a href="../horeca.php">Horeca</a>
+                    <a href="../techniek.php">Techniek</a>
+                    <a href="../klantenservice.php">klanten service</a>
+                    <a href="../inkoop.php">Inkoop</a>
+                    <a href="../groen.php">Groen</a>
                 </nav>
             </div>
         </main>

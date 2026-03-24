@@ -9,23 +9,17 @@
 </head>
 <body>
     
-        <header>
-            <div class="wrapper">
-                <div class="Topnav">
-                    <nav>
-                        <a href="../index.php">Home</a>
-                        <a href="">Personeel</a>
-                        <a href="">Horica</a>
-                        <a href="">Techniek</a>
-                        <a href="">klanten service</a>
-                        <a href="">Inkoop</a>
-                        <a href="">Groen</a>
-                        <a href="tasks/tickets.php">tickets</a> 
-                    </nav>
-                </div>
+    <header>
+        <div class="wrapper">
+            <div class="Topnav">
+                <nav>
+                    <a href="../index.php">Home</a>
+                    <a href="afdelingen.php">Afdelingen</a>
+                    <a href="tickets.php">tickets</a> 
+                </nav>
             </div>
-        </header>
         </div>
+    </header>
     <div class="Ticketcontainer">
         <main>
             <div class="ticketnav">

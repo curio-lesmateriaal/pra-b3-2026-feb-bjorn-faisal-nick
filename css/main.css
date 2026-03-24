@@ -379,6 +379,10 @@ footer {
 
 }
 
+.ticketnav a:hover {
+    background-color: #239a60;
+}
+
 .Ticketcontainer{
     width: 600px;
     margin: 60px auto;

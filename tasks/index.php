@@ -1,3 +1,36 @@
+<?php
+$tasksFile = __DIR__ . '/tasksfile.txt';
+$tasks = [];
+
+if (file_exists($tasksFile)) {
+    if (($handle = fopen($tasksFile, 'r')) !== false) {
+        $key = 0;
+
+        while (($row = fgetcsv($handle)) !== false) {
+            if (count($row) < 4) {
+                $key++;
+                continue;
+            }
+
+            $tasks[$key] = [
+                'titel' => $row[0],
+                'beschrijving' => $row[1],
+                'afdeling' => $row[2],
+                'status' => $row[3],
+            ];
+
+            $key++;
+        }
+        fclose($handle);
+    }
+}
+
+$tasks = array_filter($tasks, function ($task) {
+    $status = strtolower(trim($task['status']));
+    return $status !== 'done' && $status !== 'klaar';
+});
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,48 +47,12 @@
 
     <h1>Tasks overzicht</h1>
 
-
     <p><a href="create.php">Nieuwe taak aanmaken</a></p>
-
-
-<!-- Controleren of een taak succesvol is opgeslagen -->
-
-    <p><a href="create.php">Nieuwe taak maken</a></p>
 
     <?php if (isset($_GET['status']) && $_GET['status'] === 'success'): ?>
         <p style="color:green;">Taak succesvol opgeslagen.</p>
     <?php endif; ?>
 
-    <?php
-    // Het pad naar het bestand met taken
-    $tasksFile = __DIR__ . '/tasksfile.txt';
-    $tasks = [];
-
-    if (file_exists($tasksFile)) {
-        if (($handle = fopen($tasksFile, 'r')) !== false) {
-            // Elke regel uit het bestand lezen en omzetten naar een taak
-            while (($row = fgetcsv($handle)) !== false) {
-                if (count($row) < 4) {
-                    continue;
-                }
-
-                $tasks[] = [
-                    'titel' => $row[0],
-                    'beschrijving' => $row[1],
-                    'afdeling' => $row[2],
-                    'status' => $row[3],
-                ];
-            }
-            fclose($handle);
-        }
-    }
-        // taken filteren (klaar = verwijderen) om alleen open taken te tonen
-    $tasks = array_filter($tasks, function ($task) {
-        $status = strtolower(trim($task['status']));
-        return $status !== 'done' && $status !== 'klaar';
-    });
-    ?>
-    <!-- als er geen taken zijn, tonen we een bericht -->
     <?php if (count($tasks) === 0): ?>
         <p>Er zijn momenteel geen open taken.</p>
     <?php else: ?>
@@ -66,24 +63,26 @@
                     <th>Beschrijving</th>
                     <th>Afdeling</th>
                     <th>Status</th>
-                    <th>Bewerk</th>
+                    <th>Acties</th>
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($tasks as $task): ?>
+                <?php foreach ($tasks as $index => $task): ?>
                     <tr>
-                            <!-- Dit stukje code zet de gegevens van een taak in een tabelcel op de webpagina. -->
                         <td><?php echo htmlspecialchars($task['titel']); ?></td>
                         <td><?php echo htmlspecialchars($task['beschrijving']); ?></td>
                         <td><?php echo htmlspecialchars($task['afdeling']); ?></td>
                         <td><?php echo htmlspecialchars($task['status']); ?></td>
                         <td>
-                            <a href="edit.php?id=<?php echo $index; ?>">Bewerk</a>
+                            <a class="edit" href="edit.php?id=<?php echo $index; ?>">Bewerk</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
     <?php endif; ?>
+
+</div>
+
 </body>
 </html>

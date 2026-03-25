@@ -39,3 +39,11 @@ a.delete {
 a.delete:hover {
     background-color: #c0392b;
 }
+
+a.edit {
+    background-color: #3498db;
+}
+
+a.edit:hover {
+    background-color: #2980b9;
+}

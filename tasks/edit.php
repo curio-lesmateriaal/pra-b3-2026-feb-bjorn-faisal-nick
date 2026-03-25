@@ -43,9 +43,9 @@
 
             <label>Status:</label><br>
             <select name="status">
-                <option value="open">Open</option>
-                <option value="bezig">Bezig</option>
-                <option value="klaar">Klaar</option>
+                <option value="todo">To do</option>
+                <option value="doing">Doing</option>
+                <option value="done">Done</option>
             </select><br><br>
 
             <button type="submit">Opslaan</button>

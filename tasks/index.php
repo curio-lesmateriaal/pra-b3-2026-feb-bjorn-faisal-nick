@@ -56,6 +56,8 @@
                     <th>Titel</th>
                     <th>Beschrijving</th>
                     <th>Afdeling</th>
+                    <th>Status</th>
+                    <th>Bewerk</th>
                 </tr>
             </thead>
             <tbody>
@@ -64,6 +66,10 @@
                         <td><?php echo htmlspecialchars($task['titel']); ?></td>
                         <td><?php echo htmlspecialchars($task['beschrijving']); ?></td>
                         <td><?php echo htmlspecialchars($task['afdeling']); ?></td>
+                        <td><?php echo htmlspecialchars($task['status']); ?></td>
+                        <td>
+                            <a href="edit.php?id=<?php echo $index; ?>">Bewerk</a>
+                        </td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

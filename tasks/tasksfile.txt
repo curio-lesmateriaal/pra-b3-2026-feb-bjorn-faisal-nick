@@ -1,2 +1,4 @@
 
 "Header maken","maak de header",Horeca,todo
+hoi,hoi,Techniek,todo
+"ticket maken","als klant wil ik een ticket voor de index",Techniek,doing

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nieuwe taak</title>
+    <link rel="stylesheet" href="../css/taskscreate.css">
 </head>
 <body>
 
@@ -27,6 +28,13 @@
             <option value="Inkoop">Inkoop</option>
             <option value="Klantenservice">Klantenservice</option>
             <option value="Groen">Groen</option>
+        </select><br><br>
+
+        <label>Status:</label><br>
+        <select name="status" required>
+            <option value="todo">To do</option>
+            <option value="doing">Doing</option>
+            <option value="done">Done</option>
         </select><br><br>
 
         <button type="submit">Opslaan</button>

@@ -10,15 +10,18 @@
 
 <div class="container">
 
-    <img src="img/logo-big-v4.png" alt="Logo" style="width:120px; margin-bottom:20px;">
+    <img src="../img/logo-big-v4.png" alt="Logo" style="width:120px; margin-bottom:20px;">
 
     <h1>Tasks overzicht</h1>
 
-<<<<<<< HEAD
+
     <p><a href="create.php">Nieuwe taak aanmaken</a></p>
 
 
 <!-- Controleren of een taak succesvol is opgeslagen -->
+
+    <p><a href="create.php">Nieuwe taak maken</a></p>
+
     <?php if (isset($_GET['status']) && $_GET['status'] === 'success'): ?>
         <p style="color:green;">Taak succesvol opgeslagen.</p>
     <?php endif; ?>
@@ -32,7 +35,6 @@
         if (($handle = fopen($tasksFile, 'r')) !== false) {
             // Elke regel uit het bestand lezen en omzetten naar een taak
             while (($row = fgetcsv($handle)) !== false) {
-                // Verwacht: titel, beschrijving, afdeling, status
                 if (count($row) < 4) {
                     continue;
                 }
@@ -61,8 +63,8 @@
             <thead>
                 <tr>
                     <th>Titel</th>
+                    <th>Beschrijving</th>
                     <th>Afdeling</th>
-                    <th>Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -70,8 +72,8 @@
                     <tr>
                             <!-- Dit stukje code zet de gegevens van een taak in een tabelcel op de webpagina. -->
                         <td><?php echo htmlspecialchars($task['titel']); ?></td>
+                        <td><?php echo htmlspecialchars($task['beschrijving']); ?></td>
                         <td><?php echo htmlspecialchars($task['afdeling']); ?></td>
-                        <td><?php echo htmlspecialchars($task['status']); ?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
